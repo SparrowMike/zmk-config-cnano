@@ -3,11 +3,11 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        zmk,matrix_transform = &five_column_transform;
     }; 
 
     vbatt: vbatt {
-	compatible = "zmk,battery-nrf-vddh";
+    	compatible = "zmk,battery-nrf-vddh";
     };
           
     default_transform: keymap_transform_0 {
