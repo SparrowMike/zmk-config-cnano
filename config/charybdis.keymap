@@ -149,7 +149,7 @@
             key-positions = <23 22>;
         };
 
-        paste {
+       dan_layer  {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&mo 2>;
