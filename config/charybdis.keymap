@@ -14,6 +14,8 @@
 #define NUMS 1
 #define DANGER 2
 #define SCROLL 3
+#define SNIPE 4
+#define AUTO 5
 
 #include "zmk-helpers/key-labels/34.h"                                      // key-position labels
 #include <behaviors.dtsi>
@@ -49,6 +51,27 @@
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&mkp MCLK>;
             key-positions = <11 12 13>;
+        };
+
+        Scroll {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&mo 3>;
+            key-positions = <10 11>;
+        };
+
+        Snipe {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&mo 4>;
+            key-positions = <3 4>;
+        };
+
+        Auto {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&mo 5>;
+            key-positions = <13 14>;
         };
 
         ParaLeft {
@@ -155,13 +178,6 @@
             bindings = <&mo 3>;
             key-positions = <33 34>;
         };
-
-        scroll {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            bindings = <&mo 3>;
-            key-positions = <10 11>;
-        };
     };
 
     behaviors {
@@ -224,10 +240,28 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                &mkp LCLK &mkp MCLK &mkp RCLK    &trans  &trans
+            >;
+        };
+
+        SNIPE {
+            bindings = <
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                &mkp LCLK &mkp MCLK &mkp RCLK    &trans  &trans
+            >;
+        };
+
+        AUTO {
+            bindings = <
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                &mkp LCLK &mkp MCLK &mkp RCLK    &trans  &trans
             >;
         };
     };
