@@ -9,6 +9,18 @@
     vbatt: vbatt {
     	compatible = "zmk,battery-nrf-vddh";
     };
+    
+    leds {
+        compatible = "gpio-leds";
+        user_led: led_0 {
+            gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
+            label = "User LED";
+        };
+    };
+
+    aliases {
+        indicator-led = &user_led;
+    };
           
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
@@ -35,17 +47,17 @@
 					        RC(3,3) RC(3,4) RC(3,1)  RC(3,6)  RC(3,8)
         >;
     };
-	
+
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
 
         diode-direction = "row2col";
-		row-gpios
-			= <&pro_micro 18 GPIO_ACTIVE_HIGH>
-			, <&pro_micro 5 GPIO_ACTIVE_HIGH>
-			, <&pro_micro 4 GPIO_ACTIVE_HIGH>
-			, <&pro_micro 9 GPIO_ACTIVE_HIGH>
-            ;
-    };
-};
+        row-gpios
+          = <&pro_micro 18 GPIO_ACTIVE_HIGH>
+          , <&pro_micro 5 GPIO_ACTIVE_HIGH>
+          , <&pro_micro 4 GPIO_ACTIVE_HIGH>
+          , <&pro_micro 9 GPIO_ACTIVE_HIGH>
+          ;
+      };
+  };
