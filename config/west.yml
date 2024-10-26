@@ -6,8 +6,6 @@ manifest:
       url-base: https://github.com/urob
     - name: inorichi
       url-base: https://github.com/inorichi
-    - name: bluedrink9
-      url-base: https://github.com/bluedrink9
 
   projects:
     - name: zmk
@@ -19,9 +17,6 @@ manifest:
       revision: main
     - name: zmk-helpers
       remote: urob
-      revision: main
-    - name: zmk-poor-mans-led-indicator
-      remote: bluedrink9
       revision: main
 
   self:
