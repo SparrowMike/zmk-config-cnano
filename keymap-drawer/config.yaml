@@ -1,0 +1,4 @@
+keyboards:
+  charybdis:
+    layout:
+      qmk_keyboard: bastardkb/charybdis/3x5
