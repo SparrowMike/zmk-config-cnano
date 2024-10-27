@@ -53,25 +53,25 @@
             key-positions = <11 12 13>;
         };
 
-        Scroll {
+        ScrollLayer {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&mo 3>;
             key-positions = <10 11>;
         };
 
-        Snipe {
+        SnipeLayer {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&mo 4>;
-            key-positions = <3 4>;
+            key-positions = <13 14>;
         };
 
-        Auto {
+        AutoLayer {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&mo 5>;
-            key-positions = <13 14>;
+            key-positions = <3 4>;
         };
 
         ParaLeft {
