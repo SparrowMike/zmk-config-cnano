@@ -1,3 +1,4 @@
+layout: { qmk_keyboard: bastardkb/charybdis/3x5 }
 layers:
   '0':
   - Q
