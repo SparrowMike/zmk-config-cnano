@@ -1,5 +1,5 @@
 layers:
-  '0':
+  BASE:
   - Q
   - W
   - E
@@ -18,8 +18,8 @@ layers:
   - H
   - {t: J, h: LEFT SHIFT}
   - {t: K, h: RIGHT COMMAND}
-  - L
-  - ;
+  - RIGHT COMMAND L
+  - RIGHT CONTROL SEMI
   - Z
   - X
   - C
@@ -30,12 +30,12 @@ layers:
   - ','
   - .
   - /
-  - '2'
-  - '1'
+  - DANGER
+  - NUMS & SYM
   - ENTER
   - SPACE
   - BACKSPACE
-  '1':
+  NUMS & SYM:
   - '!'
   - '@'
   - '#'
@@ -71,7 +71,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '2':
+  DANGER:
   - F1
   - F2
   - F3
@@ -107,43 +107,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '3':
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {type: held}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mkp LCLK'
-  - '&mkp MCLK'
-  - '&mkp RCLK'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  '4':
+  SCROLL:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -179,7 +143,43 @@ layers:
   - '&mkp MCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '5':
+  SNIPE:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - '&mkp MCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  AUTO:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -222,14 +222,12 @@ combos:
   k: '&mkp RCLK'
 - p: [11, 12, 13]
   k: '&mkp MCLK'
-- p: [16, 17, 18]
-  k: '3'
 - p: [21, 22, 23]
-  k: '4'
+  k: SCROLL
 - p: [26, 27, 28]
-  k: '4'
+  k: SNIPE
 - p: [3, 4]
-  k: '5'
+  k: AUTO
 - p: [2, 3]
   k: (
 - p: [6, 7]
@@ -244,14 +242,18 @@ combos:
   k: '}'
 - p: [15, 16]
   k: '&caps_word'
+- p: [0, 1, 2]
+  k: ESCAPE
 - p: [27, 26]
   k: ESCAPE
 - p: [28, 27]
   k: TAB
 - p: [29, 28]
   k: '`'
-- p: [21, 20]
+- p: [20, 21]
   k: Gui+ Z
+- p: [23, 24]
+  k: Gui+ Y
 - p: [19, 18]
   k: ''''
 - p: [22, 21]
@@ -259,4 +261,4 @@ combos:
 - p: [23, 22]
   k: Gui+ V
 - p: [33, 34]
-  k: '3'
+  k: DANGER

@@ -2,3 +2,39 @@ keyboards:
   charybdis:
     layout:
       qmk_keyboard: bastardkb/charybdis/3x5
+
+draw_config:
+  # Gruvbox theme colors
+  palette:
+    # Keys and legends
+    default:
+      fill: "#282828"        # Dark bg
+      stroke: "#928374"      # Gray
+      legends: "#ebdbb2"     # Light fg
+    held:
+      fill: "#458588"        # Blue
+      legends: "#fbf1c7"     # Light fg
+    shifted:
+      fill: "#98971a"        # Green
+      legends: "#fbf1c7"     # Light fg
+      
+  # Visual styling
+  key_w: 60                  # Key width
+  key_h: 56                  # Key height
+  split_gap: 30              # Gap between halves
+  combo_w: 18               # Combo connection width
+  combo_h: 18               # Combo connection height
+  
+  # Text sizing
+  legend_text_size: 14      # Primary legend size
+  small_text_size: 12       # Secondary legend size
+  
+  # Optional visual improvements
+  key_rx: 6                 # Key corner radius
+  key_r_margin: 4           # Margin between key outer radius and inner radius
+  alternate_ledge: 0.5      # The "dip" in the combo line connection
+  
+  font_family: "JetBrainsMono Nerd Font"  # Use a Nerd Font if you have it
+  font_weight: 500
+  glyph_tap_size: 14        # Size for tap glyphs
+  glyph_hold_size: 12       # Size for hold glyphs
