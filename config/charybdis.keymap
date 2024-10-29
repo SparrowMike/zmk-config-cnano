@@ -60,11 +60,18 @@
             key-positions = <21 22 23>;
         };
 
+        SnipeLayerLeft {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&mo 4>;
+            key-positions = <20 21 22>;
+        };
+
         ScrollLayerRight {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&mo 3>;
-            key-positions = <26 27 27>;
+            key-positions = <26 27 28>;
         };
 
         SnipeLayerRight {
