@@ -32,25 +32,46 @@
     combos {
         compatible = "zmk,combos";
 
-        LeftClick {
+        LeftClickLeft {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&mkp LCLK>;
             key-positions = <11 12>;
         };
 
-        RightClick {
+        RightClickLeft {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&mkp RCLK>;
             key-positions = <12 13>;
         };
 
-        MiddleClick {
+        MiddleClickLeft {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&mkp MCLK>;
             key-positions = <11 12 13>;
+        };
+
+        LeftClickRight {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&mkp LCLK>;
+            key-positions = <16 17>;
+        };
+
+        RightClickRight {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&mkp RCLK>;
+            key-positions = <17 18>;
+        };
+
+        MiddleClickRight {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&mkp MCLK>;
+            key-positions = <16 17 18>;
         };
 
         ScrollLayerLeft {
@@ -127,7 +148,7 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <8 7>;
+            key-positions = <7 8>;
         };
 
         CapsWord {
@@ -148,7 +169,7 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&kp ESCAPE>;
-            key-positions = <27 26>;
+            key-positions = <26 27>;
         };
 
         Tab {
