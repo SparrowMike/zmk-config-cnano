@@ -1,0 +1,16 @@
+if SHIELD_CNANO_DONGLE
+
+config ZMK_KEYBOARD_NAME
+	default "Charybdis"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+
+endif
+
+if SHIELD_CNANO_DONGLE || SHIELD_CNANO_LEFT || SHIELD_CNANO_RIGHT
+
+config ZMK_SPLIT
+	default y
+	
+endif
