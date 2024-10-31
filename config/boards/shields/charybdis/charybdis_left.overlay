@@ -16,3 +16,16 @@
 		, <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 		;
 };
+
+/ {
+  trackball_listener {
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+  };
+};
+
+/ {
+	vtrackball: virtual_input_trackball {
+		compatible = "zmk,virtual-input";
+	};
+};
