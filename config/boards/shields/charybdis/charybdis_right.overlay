@@ -70,4 +70,14 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
   };
-};;
+};
+
+&trackball {
+    status = "okay";
+};
+
+/ {
+	vtrackball: virtual_input_trackball {
+		compatible = "zmk,virtual-input";
+	};
+};
