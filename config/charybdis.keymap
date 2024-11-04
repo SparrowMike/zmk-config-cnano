@@ -2,13 +2,13 @@
 
 #include "zmk-helpers/helper.h"
 
-#define HM_TAPPING_TERM 280
-#define HM_TAPPING_TERM_FAST 175
-#define HM_PRIOR_IDLE 150
+#define HM_TAPPING_TERM 180
+#define HM_TAPPING_TERM_FAST 150
+#define HM_PRIOR_IDLE 120
 
 #define COMBO_TERM_FAST 35
 #define COMBO_TERM_SLOW 40
-#define COMBO_PRIOR_IDLE 100
+#define COMBO_PRIOR_IDLE 80
 
 #define BASE 0
 #define NUMS 1
@@ -237,7 +237,7 @@
 
             flavor = "balanced";
             tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <HM_TAPPING_TERM_FAST>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
             hold-trigger-key-positions = <KEYS_R KEYS_T>;
             hold-trigger-on-release;
@@ -250,7 +250,7 @@
 
             flavor = "balanced";
             tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <HM_TAPPING_TERM_FAST>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
             hold-trigger-key-positions = <KEYS_L KEYS_T>;
             hold-trigger-on-release;
@@ -293,30 +293,30 @@
         SCROLL {
             display-name = "SCROLL";
             bindings = <
-&trans  &trans  &trans    &trans    &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans       &trans  &trans  &trans  &trans  &trans
-                &mkp LCLK &mkp RCLK &mkp MCLK    &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                &trans    &trans    &trans    &trans  &trans
             >;
         };
 
         SNIPE {
             display-name = "SNIPE";
             bindings = <
-&trans  &trans  &trans    &trans    &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans       &trans  &trans  &trans  &trans  &trans
-                &mkp LCLK &mkp RCLK &mkp MCLK    &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                &trans    &trans    &trans    &trans  &trans
             >;
         };
 
         AUTO {
             display-name = "AUTO";
             bindings = <
-&trans  &trans  &trans    &trans    &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans       &trans  &trans  &trans  &trans  &trans
-                &mkp LCLK &mkp RCLK &mkp MCLK    &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+                &trans    &trans    &trans    &trans  &trans
             >;
         };
     };
